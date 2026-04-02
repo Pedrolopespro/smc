@@ -1,0 +1,90 @@
+/* ─────────────────────────────────────────────
+   DESIGN TOKENS — SMC Dark Luxury v1.0
+───────────────────────────────────────────── */
+:root {
+  /* ── Brand Palette ── */
+  --color-brand-900: #16303D;
+  --color-brand-800: #193746;
+  --color-brand-700: #1C3E4E;
+  --color-brand-600: #224D5F;
+  --color-brand-500: #255468;
+  --color-brand-400: #285C70;
+  --color-brand-accent: #6C9BAD;
+
+  /* ── Gold Accent (luxury) ── */
+  --color-gold: #C4A265;
+  --color-gold-light: #D4B87A;
+  --color-gold-dark: #A8884F;
+
+  /* ── Dark Surfaces ── */
+  --bg-base: #0A0A0A;
+  --bg-surface: #111111;
+  --bg-elevated: #1A1A1A;
+  --bg-subtle: #222222;
+
+  /* ── Light Surfaces (contrast sections) ── */
+  --bg-light: #FFFAF8;
+  --bg-light-secondary: #F2EDEA;
+
+  /* ── Text on Dark ── */
+  --text-primary: #FFFFFF;
+  --text-secondary: rgba(255, 255, 255, 0.75);
+  --text-muted: rgba(255, 255, 255, 0.50);
+  --text-subtle: rgba(255, 255, 255, 0.30);
+
+  /* ── Text on Light ── */
+  --text-dark: #111111;
+  --text-dark-secondary: #353535;
+
+  /* ── Borders ── */
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-medium: rgba(255, 255, 255, 0.12);
+  --border-strong: rgba(255, 255, 255, 0.20);
+
+  /* ── WhatsApp ── */
+  --color-whatsapp: #25D366;
+  --color-whatsapp-hover: #1ebe5d;
+
+  /* ── Typography ── */
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+
+  /* ── Type Scale ── */
+  --text-h1: clamp(42px, 6.5vw, 72px);
+  --text-h2: clamp(30px, 4vw, 52px);
+  --text-h3: clamp(20px, 2.5vw, 28px);
+  --text-h4: 22px;
+  --text-h5: 18px;
+  --text-body: 16px;
+  --text-sm: 14px;
+  --text-caption: 12px;
+
+  /* ── Spacing ── */
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-48: 48px;
+  --space-64: 64px;
+  --space-80: 80px;
+  --space-120: 120px;
+
+  /* ── Radius ── */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+
+  /* ── Shadows ── */
+  --shadow-card: 0 2px 24px rgba(0, 0, 0, 0.30);
+  --shadow-modal: 0 8px 64px rgba(0, 0, 0, 0.50);
+  --shadow-glow: 0 0 40px rgba(196, 162, 101, 0.15);
+
+  /* ── Transitions ── */
+  --ease-default: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-fast: 150ms;
+  --duration-base: 250ms;
+  --duration-slow: 400ms;
+  --duration-hero: 800ms;
+}

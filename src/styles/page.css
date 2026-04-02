@@ -1,0 +1,477 @@
+/* ═══════════════════════════════════════════════
+   PAGE.CSS — SMC Single-Page Concise Layout
+   Fiel ao mockup: Hero → Por que → Frota → CTA → Footer
+═══════════════════════════════════════════════ */
+
+/* ── HERO ────────────────────────────────── */
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: var(--space-80);
+  color: var(--text-primary);
+  overflow: hidden;
+}
+
+.hero__media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.hero__media picture,
+.hero__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center right;
+}
+
+/* Overlay: escurece mais à esquerda para legibilidade */
+.hero__media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to right, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.40) 50%, rgba(0,0,0,0.18) 100%),
+    linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 45%);
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  max-width: 640px;
+}
+
+.hero__title {
+  font-family: var(--font-body);
+  font-size: clamp(38px, 6vw, 68px);
+  font-weight: 700;
+  line-height: 1.05;
+  margin-bottom: var(--space-16);
+  letter-spacing: -0.02em;
+}
+.hero__title em {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.hero__subtitle {
+  font-size: clamp(15px, 1.6vw, 19px);
+  font-weight: 300;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--space-32);
+  max-width: 420px;
+}
+
+/* WhatsApp CTA — estilo pílula com borda branca, como no mockup */
+.btn--wa-hero {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-12);
+  padding: var(--space-12) var(--space-32);
+  border: 1.5px solid rgba(255,255,255,0.65);
+  border-radius: 100px;
+  background: transparent;
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: all var(--duration-base) var(--ease-default);
+  text-decoration: none;
+}
+.btn--wa-hero:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: #fff;
+}
+.btn--wa-hero svg {
+  flex-shrink: 0;
+}
+
+/* ── POR QUE A SMC — fundo claro ──────── */
+.porque {
+  background: #fff;
+  color: var(--text-dark);
+  padding: var(--space-80) 0;
+}
+
+.porque__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-64);
+  align-items: center;
+}
+
+.porque__title {
+  font-size: clamp(28px, 3.5vw, 42px);
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: var(--space-8);
+  line-height: 1.1;
+}
+
+.porque__sub {
+  font-size: var(--text-sm);
+  color: var(--color-brand-accent);
+  font-weight: 400;
+  margin-bottom: var(--space-32);
+}
+
+.porque__cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-16);
+  margin-bottom: var(--space-32);
+}
+
+/* Feature card — bordas suaves, fundo branco, ícone + texto */
+.feat {
+  background: #fff;
+  border: 1px solid #E8E6E3;
+  border-radius: var(--radius-lg);
+  padding: var(--space-24);
+  transition: border-color var(--duration-base), box-shadow var(--duration-base);
+}
+.feat:hover {
+  border-color: #ccc;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+.feat__icon {
+  width: 36px;
+  height: 36px;
+  margin-bottom: var(--space-12);
+  color: var(--color-brand-700);
+}
+.feat__icon svg { width: 100%; height: 100%; }
+
+.feat__title {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--text-dark);
+  margin-bottom: var(--space-4);
+}
+
+.feat__desc {
+  font-size: var(--text-caption);
+  color: #757575;
+  line-height: 1.5;
+}
+
+/* WhatsApp outline button (light bg version) */
+.btn--wa-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
+  padding: var(--space-12) var(--space-24);
+  border: 1.5px solid #ddd;
+  border-radius: 100px;
+  background: transparent;
+  color: var(--text-dark);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: all var(--duration-base) var(--ease-default);
+  text-decoration: none;
+}
+.btn--wa-outline svg { color: #25D366; }
+.btn--wa-outline:hover {
+  border-color: #25D366;
+  background: rgba(37, 211, 102, 0.06);
+}
+
+/* Vídeo no lado direito com controles */
+.porque__right {
+  display: flex;
+  justify-content: center;
+}
+.porque__video-wrapper {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  max-width: 440px;
+  width: 100%;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.12);
+  background: #000;
+}
+.porque__video-wrapper video {
+  width: 100%;
+  display: block;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
+
+/* Video Controls overlay */
+.video-controls {
+  position: absolute;
+  bottom: var(--space-16);
+  left: var(--space-16);
+  display: flex;
+  gap: var(--space-8);
+  z-index: 2;
+}
+.video-controls button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--duration-fast);
+}
+.video-controls button:hover {
+  background: rgba(0,0,0,0.75);
+}
+
+/* ── FROTA — seção escura ────────────── */
+.frota-section {
+  background: var(--bg-surface);
+  padding: var(--space-80) 0;
+}
+
+.frota-section__eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--text-caption);
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: var(--space-12);
+}
+
+.frota-section__title {
+  font-size: clamp(26px, 3vw, 38px);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-48);
+  line-height: 1.1;
+}
+
+.frota-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-24);
+}
+
+.veiculo {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: transform var(--duration-base) var(--ease-default),
+              border-color var(--duration-base);
+}
+.veiculo:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-medium);
+}
+
+.veiculo__img-wrap {
+  width: 100%;
+  height: 200px;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.veiculo__img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: var(--space-12);
+}
+
+.veiculo__info {
+  padding: var(--space-16) var(--space-16) var(--space-24);
+}
+
+.veiculo__name {
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: var(--space-4);
+}
+.veiculo__cat {
+  font-size: var(--text-caption);
+  color: var(--text-muted);
+  margin-bottom: var(--space-12);
+  display: block;
+}
+
+.btn--solicitar {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-8) var(--space-16);
+  background: var(--color-brand-700);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: var(--text-caption);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: background var(--duration-base);
+  text-decoration: none;
+}
+.btn--solicitar:hover {
+  background: var(--color-brand-600);
+}
+
+/* ── CTA FINAL — foto de fundo ──────── */
+.cta-hero {
+  position: relative;
+  padding: var(--space-120) 0;
+  overflow: hidden;
+}
+
+.cta-hero__bg {
+  position: absolute;
+  inset: 0;
+}
+.cta-hero__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.cta-hero__bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.4) 100%);
+}
+
+.cta-hero__content {
+  position: relative;
+  z-index: 1;
+  max-width: 540px;
+}
+
+.cta-hero__content h2 {
+  font-size: clamp(26px, 3.5vw, 40px);
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: var(--space-12);
+  line-height: 1.1;
+}
+.cta-hero__content p {
+  color: rgba(255,255,255,0.7);
+  font-size: var(--text-body);
+  margin-bottom: var(--space-32);
+}
+
+/* ── FOOTER ─────────────────────────── */
+.site-footer {
+  background: var(--bg-base);
+  border-top: 1px solid var(--border-subtle);
+  padding: var(--space-32) 0;
+}
+.site-footer__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.site-footer__brand img {
+  height: 28px;
+}
+.site-footer__copy {
+  font-size: var(--text-caption);
+  color: var(--text-subtle);
+}
+
+/* ── WHATSAPP FLOAT ─────────────────── */
+.whatsapp-float {
+  position: fixed;
+  bottom: var(--space-24);
+  right: var(--space-24);
+  z-index: 90;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25D366;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(37,211,102,0.35);
+  transition: transform var(--duration-base), box-shadow var(--duration-base);
+}
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 28px rgba(37,211,102,0.45);
+}
+.whatsapp-float svg { width: 28px; height: 28px; }
+.whatsapp-float::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px solid rgba(37,211,102,0.3);
+  animation: waPulse 2s ease-in-out infinite;
+}
+@keyframes waPulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.18); opacity: 0; }
+}
+
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .frota-grid { grid-template-columns: repeat(2, 1fr); }
+  .porque__grid { gap: var(--space-48); }
+}
+
+@media (max-width: 768px) {
+  /* Hero */
+  .hero { align-items: center; padding-bottom: 0; }
+  .hero__media::after {
+    background:
+      linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.30) 35%, rgba(0,0,0,0.70) 100%);
+  }
+  .hero__content { text-align: center; max-width: 100%; }
+  .hero__subtitle { max-width: 100%; margin-inline: auto; }
+  .btn--wa-hero { margin-inline: auto; }
+
+  /* Por que */
+  .porque__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-48);
+  }
+  .porque__right { order: -1; }
+  .porque__video-wrapper { max-width: 100%; }
+  .porque__video-wrapper video { aspect-ratio: 16 / 10; }
+
+  /* Frota */
+  .frota-grid { grid-template-columns: 1fr; }
+
+  /* CTA */
+  .cta-hero { padding: var(--space-80) 0; }
+  .cta-hero__content { text-align: center; }
+  .cta-hero__content .btn--wa-hero { margin-inline: auto; }
+
+  /* Footer */
+  .site-footer__inner { flex-direction: column; gap: var(--space-12); text-align: center; }
+}
+
+@media (max-width: 480px) {
+  .porque__cards { grid-template-columns: 1fr; }
+}

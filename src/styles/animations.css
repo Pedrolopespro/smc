@@ -1,0 +1,40 @@
+/* ── SCROLL ANIMATIONS ── */
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity var(--duration-slow) var(--ease-default),
+              transform var(--duration-slow) var(--ease-default);
+}
+.fade-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered delays */
+.porque__cards .feat:nth-child(1) { transition-delay: 0ms; }
+.porque__cards .feat:nth-child(2) { transition-delay: 80ms; }
+.porque__cards .feat:nth-child(3) { transition-delay: 160ms; }
+.porque__cards .feat:nth-child(4) { transition-delay: 240ms; }
+
+.frota-grid .veiculo:nth-child(1) { transition-delay: 0ms; }
+.frota-grid .veiculo:nth-child(2) { transition-delay: 80ms; }
+.frota-grid .veiculo:nth-child(3) { transition-delay: 160ms; }
+.frota-grid .veiculo:nth-child(4) { transition-delay: 0ms; }
+.frota-grid .veiculo:nth-child(5) { transition-delay: 80ms; }
+.frota-grid .veiculo:nth-child(6) { transition-delay: 160ms; }
+
+/* ── HERO ENTRANCE ── */
+.hero__title,
+.hero__subtitle,
+.hero__content > .btn--wa-hero {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: heroIn 700ms var(--ease-default) forwards;
+}
+.hero__title     { animation-delay: 200ms; }
+.hero__subtitle  { animation-delay: 400ms; }
+.hero__content > .btn--wa-hero { animation-delay: 600ms; }
+
+@keyframes heroIn {
+  to { opacity: 1; transform: translateY(0); }
+}
