@@ -23,17 +23,35 @@
 .frota-grid .veiculo:nth-child(5) { transition-delay: 80ms; }
 .frota-grid .veiculo:nth-child(6) { transition-delay: 160ms; }
 
+/* Stagger: serviços grid */
+.servicos__grid .servico-card:nth-child(1) { transition-delay: 0ms; }
+.servicos__grid .servico-card:nth-child(2) { transition-delay: 60ms; }
+.servicos__grid .servico-card:nth-child(3) { transition-delay: 120ms; }
+.servicos__grid .servico-card:nth-child(4) { transition-delay: 180ms; }
+.servicos__grid .servico-card:nth-child(5) { transition-delay: 0ms; }
+.servicos__grid .servico-card:nth-child(6) { transition-delay: 60ms; }
+.servicos__grid .servico-card:nth-child(7) { transition-delay: 120ms; }
+.servicos__grid .servico-card:nth-child(8) { transition-delay: 180ms; }
+
+/* Stagger: sobre pilares */
+.sobre__pilares .pilar:nth-child(1) { transition-delay: 0ms; }
+.sobre__pilares .pilar:nth-child(2) { transition-delay: 80ms; }
+.sobre__pilares .pilar:nth-child(3) { transition-delay: 160ms; }
+.sobre__pilares .pilar:nth-child(4) { transition-delay: 240ms; }
+
 /* ── HERO ENTRANCE ── */
 .hero__title,
 .hero__subtitle,
-.hero__content > .btn--wa-hero {
+.hero__ctas,
+.hero__badge {
   opacity: 0;
   transform: translateY(20px);
   animation: heroIn 700ms var(--ease-default) forwards;
 }
-.hero__title     { animation-delay: 200ms; }
-.hero__subtitle  { animation-delay: 400ms; }
-.hero__content > .btn--wa-hero { animation-delay: 600ms; }
+.hero__title    { animation-delay: 200ms; }
+.hero__subtitle { animation-delay: 380ms; }
+.hero__ctas     { animation-delay: 540ms; }
+.hero__badge    { animation-delay: 680ms; }
 
 @keyframes heroIn {
   to { opacity: 1; transform: translateY(0); }

@@ -63,6 +63,9 @@ document.querySelectorAll('.feat, .veiculo, .porque__right, .cta-hero__content')
   observer.observe(el)
 })
 
+// Observe elements that already have fade-up in HTML
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el))
+
 // ── VIDEO PLAYER — "Por que" section ──
 const video = document.getElementById('porqueVideo')
 const playBtn = document.getElementById('videoPlayBtn')
