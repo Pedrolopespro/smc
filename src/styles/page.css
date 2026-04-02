@@ -377,6 +377,312 @@
   margin-bottom: var(--space-32);
 }
 
+/* ── HERO BADGE + DUAL CTA ──────────── */
+.hero__ctas {
+  display: flex;
+  align-items: center;
+  gap: var(--space-16);
+  margin-bottom: var(--space-24);
+  flex-wrap: wrap;
+}
+
+.btn--ghost-hero {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-12) var(--space-32);
+  border: 1.5px solid rgba(255,255,255,0.30);
+  border-radius: 100px;
+  background: transparent;
+  color: rgba(255,255,255,0.80);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: all var(--duration-base) var(--ease-default);
+  text-decoration: none;
+}
+.btn--ghost-hero:hover {
+  border-color: rgba(255,255,255,0.65);
+  color: #fff;
+}
+
+.hero__badge {
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+  font-size: var(--text-caption);
+  color: rgba(255,255,255,0.50);
+  letter-spacing: 0.04em;
+}
+.hero__badge-sep {
+  opacity: 0.4;
+}
+
+/* ── SERVIÇOS ───────────────────────── */
+.servicos {
+  background: var(--bg-base);
+  padding: var(--space-80) 0;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.servicos__title {
+  font-size: clamp(26px, 3vw, 38px);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-48);
+  line-height: 1.1;
+}
+
+.servicos__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-16);
+}
+
+.servico-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-24);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  transition: border-color var(--duration-base), transform var(--duration-base);
+}
+.servico-card:hover {
+  border-color: var(--border-medium);
+  transform: translateY(-3px);
+}
+
+.servico-card__icon {
+  width: 32px;
+  height: 32px;
+  color: var(--color-brand-accent);
+  margin-bottom: var(--space-4);
+  flex-shrink: 0;
+}
+.servico-card__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.servico-card__title {
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.servico-card__desc {
+  font-size: var(--text-caption);
+  color: var(--text-muted);
+  line-height: 1.55;
+  flex: 1;
+}
+
+.servico-card__link {
+  font-size: var(--text-caption);
+  font-weight: 500;
+  color: var(--color-brand-accent);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  margin-top: var(--space-8);
+  transition: color var(--duration-fast);
+}
+.servico-card__link:hover {
+  color: var(--text-primary);
+}
+
+/* ── NÚMEROS ────────────────────────── */
+.numeros {
+  background: var(--color-brand-700);
+  padding: var(--space-64) 0;
+}
+
+.numeros__grid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr;
+  align-items: center;
+  gap: 0;
+  margin-bottom: var(--space-24);
+}
+
+.numeros__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-8);
+}
+
+.numeros__num {
+  font-family: var(--font-display);
+  font-size: clamp(42px, 6vw, 72px);
+  font-weight: 600;
+  color: #fff;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.numeros__num em {
+  font-style: normal;
+  color: rgba(255,255,255,0.55);
+  font-size: 0.6em;
+}
+
+.numeros__label {
+  font-size: var(--text-sm);
+  color: rgba(255,255,255,0.65);
+  font-weight: 400;
+}
+
+.numeros__divider {
+  width: 1px;
+  height: 60px;
+  background: rgba(255,255,255,0.15);
+  margin: 0 var(--space-48);
+}
+
+.numeros__sub {
+  text-align: center;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(14px, 1.5vw, 17px);
+  color: rgba(255,255,255,0.45);
+}
+
+/* ── AMENITIES (Frota) ──────────────── */
+.frota-section__amenities {
+  font-size: var(--text-caption);
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+  margin-bottom: var(--space-48);
+}
+
+/* ── SOBRE ──────────────────────────── */
+.sobre {
+  background: var(--bg-surface);
+  padding: var(--space-80) 0;
+}
+
+.eyebrow--light {
+  color: var(--color-gold);
+}
+
+.sobre__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-64);
+  align-items: start;
+}
+
+.sobre__title {
+  font-size: clamp(28px, 3.5vw, 42px);
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.1;
+  margin-bottom: var(--space-24);
+}
+
+.sobre__desc {
+  font-size: var(--text-body);
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: var(--space-16);
+}
+
+.sobre__pilares {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-16);
+}
+
+.pilar {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-24);
+  transition: border-color var(--duration-base);
+}
+.pilar:hover {
+  border-color: var(--border-medium);
+}
+
+.pilar__icon {
+  width: 28px;
+  height: 28px;
+  color: var(--color-brand-accent);
+  margin-bottom: var(--space-12);
+}
+.pilar__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.pilar__title {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: var(--space-4);
+}
+
+.pilar__desc {
+  font-size: var(--text-caption);
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* ── CONTATO — canal cards ──────────── */
+.contato-canais {
+  display: flex;
+  gap: var(--space-16);
+  flex-wrap: wrap;
+  margin-top: var(--space-32);
+}
+
+.canal-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-8);
+  padding: var(--space-24) var(--space-32);
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: var(--radius-lg);
+  color: #fff;
+  text-decoration: none;
+  min-width: 160px;
+  text-align: center;
+  transition: background var(--duration-base), border-color var(--duration-base);
+}
+.canal-card:hover {
+  background: rgba(255,255,255,0.14);
+  border-color: rgba(255,255,255,0.28);
+}
+
+.canal-card__icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-4);
+}
+
+.canal-card__label {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.canal-card__sub {
+  font-size: var(--text-caption);
+  color: rgba(255,255,255,0.55);
+}
+
+/* ── FOOTER NAV ─────────────────────── */
 /* ── FOOTER ─────────────────────────── */
 .site-footer {
   background: var(--bg-base);
@@ -394,6 +700,20 @@
 .site-footer__copy {
   font-size: var(--text-caption);
   color: var(--text-subtle);
+}
+
+.site-footer__nav {
+  display: flex;
+  gap: var(--space-24);
+}
+.site-footer__nav a {
+  font-size: var(--text-caption);
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color var(--duration-fast);
+}
+.site-footer__nav a:hover {
+  color: var(--text-primary);
 }
 
 /* ── WHATSAPP FLOAT ─────────────────── */
@@ -438,6 +758,8 @@
 @media (max-width: 1024px) {
   .frota-grid { grid-template-columns: repeat(2, 1fr); }
   .porque__grid { gap: var(--space-48); }
+  .servicos__grid { grid-template-columns: repeat(2, 1fr); }
+  .sobre__grid { gap: var(--space-48); }
 }
 
 @media (max-width: 768px) {
@@ -470,8 +792,26 @@
 
   /* Footer */
   .site-footer__inner { flex-direction: column; gap: var(--space-12); text-align: center; }
+  .site-footer__nav { justify-content: center; flex-wrap: wrap; gap: var(--space-16); }
+
+  /* Serviços */
+  .servicos__grid { grid-template-columns: 1fr; }
+
+  /* Números */
+  .numeros__grid { grid-template-columns: 1fr; gap: var(--space-32); }
+  .numeros__divider { width: 60px; height: 1px; margin: 0 auto; }
+
+  /* Sobre */
+  .sobre__grid { grid-template-columns: 1fr; gap: var(--space-48); }
+  .sobre__pilares { grid-template-columns: 1fr 1fr; }
+
+  /* Contato canais */
+  .contato-canais { justify-content: center; }
+  .canal-card { min-width: 140px; flex: 1; }
 }
 
 @media (max-width: 480px) {
   .porque__cards { grid-template-columns: 1fr; }
+  .sobre__pilares { grid-template-columns: 1fr; }
+  .hero__ctas { flex-direction: column; align-items: flex-start; }
 }
