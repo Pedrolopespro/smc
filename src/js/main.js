@@ -77,6 +77,12 @@ if (video && playBtn && muteBtn) {
   const iconMuted = muteBtn.querySelector('.icon-muted')
   const iconUnmuted = muteBtn.querySelector('.icon-unmuted')
 
+  // Estado inicial: autoplay já tocando e mudo
+  iconPlay.style.display = 'none'
+  iconPause.style.display = 'block'
+  iconMuted.style.display = 'block'
+  iconUnmuted.style.display = 'none'
+
   // Play / Pause
   playBtn.addEventListener('click', () => {
     if (video.paused) {
