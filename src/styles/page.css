@@ -41,6 +41,7 @@
   position: relative;
   z-index: 1;
   max-width: 640px;
+  text-align: left;
 }
 
 .hero__title {
@@ -764,15 +765,33 @@
 }
 
 @media (max-width: 768px) {
-  /* Hero */
-  .hero { align-items: center; padding-bottom: 0; }
+  /* Hero — conteúdo na base, texto alinhado à esquerda */
+  .hero {
+    align-items: flex-end;
+    padding-bottom: var(--space-48);
+  }
   .hero__media::after {
     background:
-      linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.30) 35%, rgba(0,0,0,0.70) 100%);
+      linear-gradient(to right, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.40) 100%),
+      linear-gradient(to top, rgba(0,0,0,0.80) 0%, rgba(0,0,0,0.15) 55%);
   }
-  .hero__content { text-align: center; max-width: 100%; }
-  .hero__subtitle { max-width: 100%; margin-inline: auto; }
-  .btn--wa-hero { margin-inline: auto; }
+  .hero__content {
+    text-align: left;
+    max-width: 100%;
+  }
+  .hero__subtitle { max-width: 100%; }
+  .hero__ctas {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-12);
+  }
+  .btn--wa-hero { width: 100%; justify-content: center; }
+  .btn--ghost-hero { width: 100%; justify-content: center; }
+  .hero__badge {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: var(--space-8);
+  }
 
   /* Por que */
   .porque__grid {
@@ -814,5 +833,4 @@
 @media (max-width: 480px) {
   .porque__cards { grid-template-columns: 1fr; }
   .sobre__pilares { grid-template-columns: 1fr; }
-  .hero__ctas { flex-direction: column; align-items: flex-start; }
 }
