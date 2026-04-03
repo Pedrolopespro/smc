@@ -814,8 +814,17 @@
     gap: var(--space-48);
   }
   .porque__right { order: -1; }
-  .porque__video-wrapper { max-width: 100%; }
-  .porque__video-wrapper video { aspect-ratio: 16 / 10; }
+  .porque__video-wrapper {
+    max-width: 100%;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+  }
+  .porque__video-wrapper video {
+    aspect-ratio: 9 / 16;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
 
   /* Frota */
   .frota-grid { grid-template-columns: 1fr; }
