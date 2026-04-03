@@ -12,6 +12,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(projectRoot, 'pages/index.html'),
+        servicos: resolve(projectRoot, 'pages/servicos.html'),
       },
     },
   },

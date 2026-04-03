@@ -1,0 +1,227 @@
+/* ═══════════════════════════════════════════════
+   SERVICOS-PAGE.CSS — Página dedicada de serviços
+   Herda tokens de global.css + page.css
+═══════════════════════════════════════════════ */
+
+/* ── NAV link ativo ──────────────────── */
+.nav__link--active {
+  color: var(--color-gold);
+}
+
+/* ── PAGE HERO ───────────────────────── */
+.sp-hero {
+  position: relative;
+  min-height: 55vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: var(--text-primary);
+  overflow: hidden;
+}
+
+.sp-hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.sp-hero__bg picture,
+.sp-hero__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+}
+.sp-hero__bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to right, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.55) 60%, rgba(0,0,0,0.30) 100%),
+    linear-gradient(to top, rgba(0,0,0,0.70) 0%, transparent 55%);
+}
+
+.sp-hero__content {
+  position: relative;
+  z-index: 1;
+  padding-top: calc(var(--space-80) + 64px); /* nav height */
+  padding-bottom: var(--space-48);
+  max-width: 640px;
+}
+
+.sp-hero__title {
+  font-family: var(--font-body);
+  font-size: clamp(30px, 4.5vw, 56px);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-16);
+  color: #fff;
+}
+
+.sp-hero__sub {
+  font-size: clamp(14px, 1.5vw, 17px);
+  color: rgba(255,255,255,0.65);
+  line-height: 1.6;
+}
+
+/* ── Índice âncora ───────────────────── */
+.sp-hero__index {
+  position: relative;
+  z-index: 1;
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.sp-hero__index-inner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-16);
+  padding-block: var(--space-16);
+  flex-wrap: wrap;
+}
+
+.sp-hero__index a {
+  font-size: var(--text-caption);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+  text-decoration: none;
+  transition: color var(--duration-fast);
+}
+.sp-hero__index a:hover {
+  color: var(--color-gold);
+}
+
+.sp-sep {
+  color: rgba(255,255,255,0.20);
+  font-size: var(--text-caption);
+}
+
+/* ── BLOCOS DE SERVIÇO ───────────────── */
+.sp-block {
+  padding: var(--space-80) 0;
+  background: var(--bg-base);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.sp-block--alt {
+  background: var(--bg-surface);
+}
+
+/* Destaque: Escolta — fundo mais escuro */
+.sp-block--destaque {
+  background: var(--bg-elevated);
+}
+
+.sp-block__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-64);
+  align-items: start;
+}
+
+/* Texto à esquerda */
+.sp-block__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+.sp-block__title {
+  font-size: clamp(26px, 3vw, 40px);
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.1;
+  margin: 0;
+}
+
+.sp-block__desc {
+  font-size: var(--text-body);
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* Badge "Serviço Exclusivo" */
+.sp-badge {
+  display: inline-block;
+  padding: var(--space-4) var(--space-12);
+  background: var(--color-gold);
+  color: var(--bg-base);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border-radius: 100px;
+  width: fit-content;
+}
+
+/* Painel de detalhes à direita */
+.sp-block__details {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-32);
+}
+
+.sp-block--alt .sp-block__details {
+  background: var(--bg-base);
+}
+
+.sp-block--destaque .sp-block__details {
+  background: var(--bg-surface);
+}
+
+.sp-block__details-title {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-20);
+}
+
+/* Lista de itens */
+.sp-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+}
+
+.sp-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-12);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.sp-list li::before {
+  content: '';
+  display: block;
+  flex-shrink: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--color-brand-accent);
+  margin-top: 7px;
+}
+
+/* ── RESPONSIVO ──────────────────────── */
+@media (max-width: 1024px) {
+  .sp-block__inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-32);
+  }
+}
+
+@media (max-width: 768px) {
+  .sp-hero__content { padding-bottom: var(--space-32); }
+  .sp-hero__index-inner { gap: var(--space-12); }
+  .sp-block { padding: var(--space-48) 0; }
+  .sp-block__details { padding: var(--space-24); }
+}

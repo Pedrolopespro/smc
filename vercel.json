@@ -2,6 +2,7 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "rewrites": [
-    { "source": "/", "destination": "/pages/index.html" }
+    { "source": "/", "destination": "/pages/index.html" },
+    { "source": "/servicos", "destination": "/pages/servicos.html" }
   ]
 }

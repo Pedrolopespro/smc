@@ -3,36 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Servicos SMC — Transfer aeroporto, transporte corporativo, atendimento diplomatico, eventos, veiculos blindados, escolta profissional e turismo executivo.">
-  <title>Servicos — SMC Transporte Executivo</title>
+  <meta name="description" content="Serviços SMC Transporte Executivo — Transporte corporativo, atendimento diplomático, veículos blindados, escolta profissional, turismo executivo e atendimento 24h em Brasília.">
+  <title>Serviços — SMC Transporte Executivo</title>
   <link rel="icon" href="/favicon.png">
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="../styles/global.css">
   <link rel="stylesheet" href="../styles/nav.css">
-  <link rel="stylesheet" href="../styles/hero.css">
-  <link rel="stylesheet" href="../styles/sections.css">
-  <link rel="stylesheet" href="../styles/footer.css">
+  <link rel="stylesheet" href="../styles/page.css">
   <link rel="stylesheet" href="../styles/animations.css">
+  <link rel="stylesheet" href="../styles/servicos-page.css">
 </head>
 <body>
 
-  <!-- NAV -->
+  <!-- ── NAV ── -->
   <header class="nav nav--scrolled" id="nav">
     <div class="container nav__inner">
       <nav class="nav__left">
         <a href="index.html" class="nav__link">Home</a>
-        <a href="servicos.html" class="nav__link">Servicos</a>
-        <a href="frota.html" class="nav__link">Frota</a>
+        <a href="servicos.html" class="nav__link nav__link--active">Serviços</a>
+        <a href="index.html#frota" class="nav__link">Frota</a>
       </nav>
       <a href="index.html" class="nav__logo">
         <img src="../assets/images/logo-white.png" alt="SMC Transporte Executivo" height="44">
       </a>
       <nav class="nav__right">
-        <a href="turismo.html" class="nav__link">Turismo</a>
-        <a href="contato.html" class="nav__link">Contato</a>
-        <a href="sobre.html" class="nav__link">Sobre</a>
+        <a href="index.html#numeros" class="nav__link">Clientes</a>
+        <a href="index.html#sobre" class="nav__link">Sobre</a>
+        <a href="index.html#contato" class="nav__link">Contato</a>
       </nav>
       <button class="nav__burger" aria-label="Menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -40,64 +42,73 @@
     </div>
     <div class="nav__mobile" id="navMobile">
       <a href="index.html">Home</a>
-      <a href="servicos.html">Servicos</a>
-      <a href="frota.html">Frota</a>
-      <a href="turismo.html">Turismo</a>
-      <a href="contato.html">Contato</a>
-      <a href="sobre.html">Sobre</a>
+      <a href="servicos.html">Serviços</a>
+      <a href="index.html#frota">Frota</a>
+      <a href="index.html#numeros">Clientes</a>
+      <a href="index.html#sobre">Sobre</a>
+      <a href="index.html#contato">Contato</a>
+      <a href="https://wa.me/5561999999999?text=Olá%2C+gostaria+de+um+orçamento+SMC" target="_blank" rel="noopener" class="btn btn--whatsapp" style="margin-top: var(--space-16)">WhatsApp Direto</a>
     </div>
   </header>
 
-  <!-- PAGE HERO -->
-  <section class="page-hero">
-    <div class="container page-hero__content">
-      <p class="eyebrow">Nossos servicos</p>
-      <h1>Servicos SMC</h1>
-      <p>Cada servico foi desenvolvido para um perfil de necessidade especifico. Precisao, discricao e o padrao que a SMC garante em cada operacao.</p>
+  <!-- ══════════════════════════════════════════
+       PAGE HERO
+  ══════════════════════════════════════════ -->
+  <section class="sp-hero">
+    <div class="sp-hero__bg">
+      <picture>
+        <source media="(max-width: 768px)" srcset="../assets/images/hero-mobile.jpg">
+        <img src="../assets/images/hero-desktop.jpg" alt="" aria-hidden="true" fetchpriority="high">
+      </picture>
     </div>
+    <div class="container sp-hero__content">
+      <p class="eyebrow">Nossos Serviços</p>
+      <h1 class="sp-hero__title">Soluções sob medida<br>para cada deslocamento.</h1>
+      <p class="sp-hero__sub">Precisão, discrição e o padrão que a SMC garante em cada operação.</p>
+    </div>
+
+    <!-- Índice âncora -->
+    <nav class="sp-hero__index" aria-label="Ir para serviço">
+      <div class="container sp-hero__index-inner">
+        <a href="#corporativo">Corporativo</a>
+        <span class="sp-sep">·</span>
+        <a href="#diplomatico">Diplomático</a>
+        <span class="sp-sep">·</span>
+        <a href="#blindados">Blindados</a>
+        <span class="sp-sep">·</span>
+        <a href="#escolta">Escolta</a>
+        <span class="sp-sep">·</span>
+        <a href="#turismo">Turismo</a>
+        <span class="sp-sep">·</span>
+        <a href="#atendimento24h">24h</a>
+      </div>
+    </nav>
   </section>
 
-  <!-- SERVICES -->
+  <!-- ══════════════════════════════════════════
+       SERVIÇOS — blocos alternados
+  ══════════════════════════════════════════ -->
   <main>
-    <!-- Transfer Aeroporto -->
-    <section class="service-block" id="transfer">
-      <div class="container service-block__inner">
-        <div class="service-block__text">
-          <p class="eyebrow">Transfer</p>
-          <h2>Transfer Aeroporto</h2>
-          <p>Chegar no horario nao e merito. E obrigacao. A SMC realiza transfers para o Aeroporto Internacional JK e demais terminais com monitoramento de voo em tempo real, motorista aguardando a chegada e rota planejada para evitar atrasos.</p>
-          <p>Sem espera na fila de taxi. Sem aplicativo que cancela na ultima hora. Seu carro no lugar e na hora certa.</p>
-          <a href="contato.html?servico=transfer" class="btn btn--primary">Solicitar Transfer</a>
-        </div>
-        <div class="service-block__details">
-          <h4>Detalhes do servico</h4>
-          <ul>
-            <li>Aeroporto JK (BSB), Congonhas (CGH), Guarulhos (GRU) e outros</li>
-            <li>Rastreamento de voo em tempo real</li>
-            <li>Motorista aguardando no saguao com placa de identificacao</li>
-            <li>Veiculo disponivel para embarque imediato</li>
-            <li>Atendimento 24 horas</li>
-          </ul>
-        </div>
-      </div>
-    </section>
 
     <!-- Transporte Corporativo -->
-    <section class="service-block" id="corporativo">
-      <div class="container service-block__inner">
-        <div class="service-block__text">
+    <section class="sp-block" id="corporativo">
+      <div class="container sp-block__inner">
+        <div class="sp-block__text fade-up">
           <p class="eyebrow">Corporativo</p>
-          <h2>Transporte Corporativo</h2>
-          <p>O deslocamento do seu executivo e um reflexo da sua empresa. A SMC oferece contratos mensais, frotas dedicadas e gestao completa de deslocamentos corporativos.</p>
-          <p>Atendemos gestores, diretores e equipes que precisam de um parceiro de alto nivel e confiavel.</p>
-          <a href="contato.html?servico=corporativo" class="btn btn--primary">Solicitar Proposta Corporativa</a>
+          <h2 class="sp-block__title">Transporte Corporativo</h2>
+          <p class="sp-block__desc">O deslocamento do seu executivo é um reflexo da sua empresa. A SMC oferece contratos mensais, frotas dedicadas e gestão completa de deslocamentos corporativos.</p>
+          <p class="sp-block__desc">Atendemos gestores, diretores e equipes que precisam de um parceiro de alto nível e confiável.</p>
+          <a href="https://wa.me/5561999999999?text=Olá%2C+gostaria+de+transporte+corporativo" target="_blank" rel="noopener" class="btn btn--wa-hero">
+            Solicitar Proposta
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
         </div>
-        <div class="service-block__details">
-          <h4>Detalhes do servico</h4>
-          <ul>
+        <div class="sp-block__details fade-up">
+          <h4 class="sp-block__details-title">O que está incluído</h4>
+          <ul class="sp-list">
             <li>Contratos mensais com volume definido</li>
-            <li>Motoristas fixos ou rotativos, conforme a preferencia do cliente</li>
-            <li>Relatorios de utilizacao e rastreamento de corridas</li>
+            <li>Motoristas fixos ou rotativos conforme preferência</li>
+            <li>Relatórios de utilização e rastreamento de corridas</li>
             <li>Central de atendimento exclusiva para clientes corporativos</li>
             <li>Faturamento centralizado</li>
           </ul>
@@ -105,69 +116,52 @@
       </div>
     </section>
 
-    <!-- Atendimento Diplomatico -->
-    <section class="service-block" id="diplomatico">
-      <div class="container service-block__inner">
-        <div class="service-block__text">
-          <p class="eyebrow">Diplomatico</p>
-          <h2>Atendimento Diplomatico</h2>
-          <p>O ambiente diplomatico exige um nivel de precisao que vai alem do transporte. Protocolo, idioma, timing e discricao absoluta nao sao diferenciais — sao requisitos minimos.</p>
-          <p>A SMC atende embaixadas e missoes diplomaticas em Brasilia com motoristas bilingues, protocolos internacionais e confidencialidade como padrao de operacao.</p>
-          <a href="contato.html?servico=diplomatico" class="btn btn--primary">Solicitar Atendimento Diplomatico</a>
+    <!-- Atendimento Diplomático -->
+    <section class="sp-block sp-block--alt" id="diplomatico">
+      <div class="container sp-block__inner">
+        <div class="sp-block__text fade-up">
+          <p class="eyebrow">Diplomático</p>
+          <h2 class="sp-block__title">Atendimento Diplomático</h2>
+          <p class="sp-block__desc">O ambiente diplomático exige um nível de precisão que vai além do transporte. Protocolo, idioma, timing e discrição absoluta não são diferenciais — são requisitos mínimos.</p>
+          <p class="sp-block__desc">A SMC atende embaixadas e missões diplomáticas em Brasília com motoristas bilíngues, protocolos internacionais e confidencialidade como padrão de operação.</p>
+          <a href="https://wa.me/5561999999999?text=Olá%2C+gostaria+de+atendimento+diplomático" target="_blank" rel="noopener" class="btn btn--wa-hero">
+            Solicitar Atendimento
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
         </div>
-        <div class="service-block__details">
-          <h4>Detalhes do servico</h4>
-          <ul>
-            <li>Motoristas bilingues (portugues/ingles)</li>
-            <li>Conhecimento de protocolos de cerimonial e etiqueta diplomatica</li>
+        <div class="sp-block__details fade-up">
+          <h4 class="sp-block__details-title">O que está incluído</h4>
+          <ul class="sp-list">
+            <li>Motoristas bilíngues (português/inglês)</li>
+            <li>Protocolos de cerimonial e etiqueta diplomática</li>
             <li>Confidencialidade total da identidade e rota do passageiro</li>
-            <li>Disponibilidade para contratos de longa duracao com embaixadas</li>
-            <li>Compativel com veiculos blindados e escolta profissional</li>
+            <li>Contratos de longa duração com embaixadas</li>
+            <li>Compatível com veículos blindados e escolta profissional</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- Eventos & Casamentos -->
-    <section class="service-block" id="eventos">
-      <div class="container service-block__inner">
-        <div class="service-block__text">
-          <p class="eyebrow">Eventos</p>
-          <h2>Eventos & Casamentos</h2>
-          <p>Num evento de alto padrao, a logistica nao pode ser o ponto fraco. A SMC coordena multiplos veiculos, define rotas sincronizadas e gerencia horarios para que cada convidado ou autoridade chegue no momento certo.</p>
-          <p>Somos parceiros de produtores de eventos que nao podem se dar ao luxo de indicar um fornecedor que decepciona.</p>
-          <a href="contato.html?servico=eventos" class="btn btn--primary">Solicitar Logistica de Evento</a>
+    <!-- Veículos Blindados -->
+    <section class="sp-block" id="blindados">
+      <div class="container sp-block__inner">
+        <div class="sp-block__text fade-up">
+          <p class="eyebrow">Segurança</p>
+          <h2 class="sp-block__title">Veículos Blindados</h2>
+          <p class="sp-block__desc">Para quem exige segurança reforçada sem abrir mão do conforto. A frota blindada da SMC está disponível para trajetos de maior sensibilidade — com o mesmo padrão de atendimento aplicado a toda a operação.</p>
+          <p class="sp-block__desc">Compatível com o serviço de escolta profissional para operações que demandam proteção em deslocamento.</p>
+          <a href="https://wa.me/5561999999999?text=Olá%2C+gostaria+de+informações+sobre+veículos+blindados" target="_blank" rel="noopener" class="btn btn--wa-hero">
+            Consultar Disponibilidade
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
         </div>
-        <div class="service-block__details">
-          <h4>Detalhes do servico</h4>
-          <ul>
-            <li>Coordenacao de frota multipla com comunicacao integrada</li>
-            <li>Atendimento para casamentos, eventos corporativos e cupulas</li>
-            <li>Transfer de convidados VIP com itinerario personalizado</li>
-            <li>Uniformes e apresentacao impecavel dos motoristas</li>
-            <li>Orcamento personalizado por evento</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Veiculos Blindados -->
-    <section class="service-block" id="blindados">
-      <div class="container service-block__inner">
-        <div class="service-block__text">
-          <p class="eyebrow">Blindados</p>
-          <h2>Veiculos Blindados</h2>
-          <p>Para quem exige seguranca reforcada sem abrir mao do conforto. A frota blindada da SMC esta disponivel para trajetos de maior sensibilidade — com o mesmo padrao de atendimento aplicado a toda a operacao.</p>
-          <p>Compativel com o servico de escolta profissional para operacoes que demandam protecao em deslocamento.</p>
-          <a href="contato.html?servico=blindados" class="btn btn--primary">Consultar Disponibilidade</a>
-        </div>
-        <div class="service-block__details">
-          <h4>Detalhes do servico</h4>
-          <ul>
-            <li>Veiculos com blindagem de nivel certificado</li>
-            <li>Operacao sigilosa — sem identificacao externa da blindagem</li>
-            <li>Motoristas com treinamento em direcao defensiva</li>
-            <li>Compativel com escolta motorizada</li>
+        <div class="sp-block__details fade-up">
+          <h4 class="sp-block__details-title">O que está incluído</h4>
+          <ul class="sp-list">
+            <li>Veículos com blindagem de nível certificado</li>
+            <li>Operação sigilosa — sem identificação externa da blindagem</li>
+            <li>Motoristas com treinamento em direção defensiva</li>
+            <li>Compatível com escolta motorizada</li>
             <li>Disponibilidade mediante consulta e agendamento</li>
           </ul>
         </div>
@@ -175,123 +169,142 @@
     </section>
 
     <!-- Escolta Profissional -->
-    <section class="service-block" id="escolta">
-      <div class="container service-block__inner">
-        <div class="service-block__text">
-          <span class="service-badge">Servico Exclusivo</span>
-          <p class="eyebrow">Seguranca</p>
-          <h2>Escolta Profissional</h2>
-          <p>Para quem a seguranca nao e opcional. A SMC oferece servico de escolta motorizada com profissionais treinados, rotas planejadas e coordenacao em tempo real do ponto de partida ao destino, sem imprevistos.</p>
-          <p>Atendemos embaixadores, ministros, parlamentares, CEOs de alta exposicao. Cada missao e planejada com antecedencia, executada com rigor e conduzida com total sigilo.</p>
-          <a href="contato.html?servico=escolta" class="btn btn--primary">Solicitar Escolta</a>
+    <section class="sp-block sp-block--alt sp-block--destaque" id="escolta">
+      <div class="container sp-block__inner">
+        <div class="sp-block__text fade-up">
+          <span class="sp-badge">Serviço Exclusivo</span>
+          <p class="eyebrow eyebrow--light">Escolta</p>
+          <h2 class="sp-block__title">Escolta Profissional</h2>
+          <p class="sp-block__desc">Para quem a segurança não é opcional. A SMC oferece serviço de escolta motorizada com profissionais treinados, rotas planejadas e coordenação em tempo real.</p>
+          <p class="sp-block__desc">Atendemos embaixadores, ministros, parlamentares e CEOs de alta exposição. Cada missão é planejada com antecedência, executada com rigor e conduzida com total sigilo.</p>
+          <a href="https://wa.me/5561999999999?text=Olá%2C+gostaria+de+escolta+profissional" target="_blank" rel="noopener" class="btn btn--wa-hero">
+            Solicitar Escolta
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
         </div>
-        <div class="service-block__details">
-          <h4>O que inclui</h4>
-          <ul>
-            <li>Escolta com 1 ou mais veiculos de apoio</li>
-            <li>Coordenacao de comboio e definicao de rotas seguras</li>
-            <li>Profissionais com formacao em seguranca privada e direcao defensiva</li>
-            <li>Comunicacao em tempo real entre os motoristas da escolta</li>
-            <li>Protocolos de emergencia e rotas alternativas pre-mapeadas</li>
-            <li>Compativel com veiculos blindados da frota SMC</li>
+        <div class="sp-block__details fade-up">
+          <h4 class="sp-block__details-title">O que está incluído</h4>
+          <ul class="sp-list">
+            <li>Escolta com 1 ou mais veículos de apoio</li>
+            <li>Coordenação de comboio e definição de rotas seguras</li>
+            <li>Profissionais com formação em segurança privada</li>
+            <li>Comunicação em tempo real entre os motoristas da escolta</li>
+            <li>Protocolos de emergência e rotas alternativas pré-mapeadas</li>
+            <li>Compatível com veículos blindados da frota SMC</li>
           </ul>
         </div>
       </div>
     </section>
 
     <!-- Turismo Executivo -->
-    <section class="service-block" id="turismo-exec">
-      <div class="container service-block__inner">
-        <div class="service-block__text">
+    <section class="sp-block" id="turismo">
+      <div class="container sp-block__inner">
+        <div class="sp-block__text fade-up">
           <p class="eyebrow">Turismo</p>
-          <h2>Turismo Executivo</h2>
-          <p>Brasilia e alem — com o padrao que voce ja conhece. A SMC organiza roteiros personalizados partindo de Brasilia para os principais destinos da regiao e do pais.</p>
-          <p>City tour pela capital, Chapada dos Veadeiros, Caldas Novas e viagens nacionais — com itinerario sob medida e motorista especializado.</p>
-          <a href="turismo.html" class="btn btn--primary">Explorar Roteiros</a>
+          <h2 class="sp-block__title">Turismo Executivo</h2>
+          <p class="sp-block__desc">Brasília e além — com o padrão que você já conhece. A SMC organiza roteiros personalizados partindo de Brasília para os principais destinos da região e do país.</p>
+          <p class="sp-block__desc">City tour pela capital, Chapada dos Veadeiros, Caldas Novas e viagens nacionais — com itinerário sob medida e motorista especializado.</p>
+          <a href="https://wa.me/5561999999999?text=Olá%2C+gostaria+de+roteiros+de+turismo+executivo" target="_blank" rel="noopener" class="btn btn--wa-hero">
+            Ver Roteiros
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
         </div>
-        <div class="service-block__details">
-          <h4>Destaques</h4>
-          <ul>
-            <li>City Tour Brasilia personalizado</li>
-            <li>Chapada dos Veadeiros e Pirenopolis</li>
+        <div class="sp-block__details fade-up">
+          <h4 class="sp-block__details-title">Destaques</h4>
+          <ul class="sp-list">
+            <li>City Tour Brasília personalizado</li>
+            <li>Chapada dos Veadeiros e Pirenópolis</li>
             <li>Caldas Novas e destinos regionais</li>
-            <li>Viagens nacionais de longa distancia</li>
-            <li>Roteiros sob medida para grupos e familias</li>
+            <li>Viagens nacionais de longa distância</li>
+            <li>Roteiros sob medida para grupos e famílias</li>
           </ul>
         </div>
       </div>
     </section>
 
     <!-- Atendimento 24h -->
-    <section class="service-block" id="atendimento24h">
-      <div class="container service-block__inner">
-        <div class="service-block__text">
+    <section class="sp-block sp-block--alt" id="atendimento24h">
+      <div class="container sp-block__inner">
+        <div class="sp-block__text fade-up">
           <p class="eyebrow">Disponibilidade</p>
-          <h2>Atendimento 24h</h2>
-          <p>A SMC esta disponivel a qualquer hora, qualquer dia. Central de atendimento ativa 24 horas para solicitacoes de ultima hora, emergencias e agendamentos com prazo curto.</p>
-          <a href="contato.html" class="btn btn--primary">Falar Agora</a>
+          <h2 class="sp-block__title">Atendimento 24h</h2>
+          <p class="sp-block__desc">A SMC está disponível a qualquer hora, qualquer dia. Central de atendimento ativa 24 horas para solicitações de última hora, emergências e agendamentos com prazo curto.</p>
+          <p class="sp-block__desc">Sem hora marcada, sem fila de espera. Resposta direta com quem decide.</p>
+          <a href="https://wa.me/5561999999999?text=Olá%2C+preciso+de+atendimento+imediato" target="_blank" rel="noopener" class="btn btn--wa-hero">
+            Falar Agora
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
         </div>
-        <div class="service-block__details">
-          <h4>Como funciona</h4>
-          <ul>
-            <li>Central disponivel 24 horas por dia, 7 dias por semana</li>
-            <li>Resposta em ate 30 minutos em dias uteis</li>
-            <li>Atendimento imediato para urgencias</li>
+        <div class="sp-block__details fade-up">
+          <h4 class="sp-block__details-title">Como funciona</h4>
+          <ul class="sp-list">
+            <li>Central disponível 24 horas por dia, 7 dias por semana</li>
+            <li>Resposta em até 30 minutos em dias úteis</li>
+            <li>Atendimento imediato para urgências</li>
             <li>WhatsApp, telefone e e-mail</li>
           </ul>
         </div>
       </div>
     </section>
+
   </main>
 
-  <!-- CTA FINAL -->
-  <section class="cta-final section">
-    <div class="container cta-final__inner">
-      <p class="eyebrow">Nao encontrou o que procurava?</p>
-      <h2>Fale com a SMC</h2>
-      <p>Desenvolvemos solucoes sob medida para clientes com necessidades especificas.</p>
-      <div class="cta-final__btns">
-        <a href="contato.html" class="btn btn--primary btn--lg">Solicitar Cotacao Personalizada</a>
-        <a href="https://wa.me/5561999999999?text=Ola%2C+gostaria+de+um+orcamento+SMC" target="_blank" rel="noopener" class="btn btn--whatsapp btn--lg">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          WhatsApp Direto
+  <!-- ══════════════════════════════════════════
+       CTA FINAL
+  ══════════════════════════════════════════ -->
+  <section class="cta-hero" id="contato">
+    <div class="cta-hero__bg">
+      <img src="../assets/images/hero-desktop.jpg" alt="" aria-hidden="true" loading="lazy">
+    </div>
+    <div class="container cta-hero__content">
+      <h2>Solicite seu atendimento.</h2>
+      <p>Retorno rápido e atendimento direto.</p>
+      <div class="contato-canais">
+        <a href="https://wa.me/5561999999999?text=Olá%2C+gostaria+de+um+orçamento+SMC" target="_blank" rel="noopener" class="canal-card">
+          <div class="canal-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </div>
+          <span class="canal-card__label">WhatsApp</span>
+          <span class="canal-card__sub">Resposta imediata</span>
+        </a>
+        <a href="tel:+5561999999999" class="canal-card">
+          <div class="canal-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
+          <span class="canal-card__label">Ligar</span>
+          <span class="canal-card__sub">(61) 9 9999-9999</span>
+        </a>
+        <a href="mailto:contato@smctransporte.com.br" class="canal-card">
+          <div class="canal-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <span class="canal-card__label">E-mail</span>
+          <span class="canal-card__sub">contato@smctransporte.com.br</span>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container footer__inner">
-      <div class="footer__brand">
-        <img src="../assets/images/logo-white.png" alt="SMC Transporte Executivo" height="36">
-        <p>Transporte executivo premium em Brasilia e regiao. Pontualidade, discricao e excelencia em cada quilometro.</p>
+  <!-- ══════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div class="site-footer__brand">
+        <img src="../assets/images/logo-white.png" alt="SMC Transporte Executivo" height="32">
       </div>
-      <div class="footer__nav">
-        <h5>Servicos</h5>
-        <a href="servicos.html">Executivo Corporativo</a>
-        <a href="turismo.html">Turismo Premium</a>
-        <a href="frota.html">Nossa Frota</a>
-        <a href="contato.html">Orcamento</a>
-      </div>
-      <div class="footer__nav">
-        <h5>Empresa</h5>
-        <a href="sobre.html">Sobre a SMC</a>
-        <a href="privacidade.html">Privacidade</a>
-      </div>
-      <div class="footer__contact">
-        <h5>Contato</h5>
-        <a href="https://wa.me/5561999999999" target="_blank" rel="noopener">WhatsApp</a>
-        <a href="mailto:contato@smctransporte.com.br">contato@smctransporte.com.br</a>
-        <span>Brasilia, DF — Brasil</span>
-      </div>
-    </div>
-    <div class="footer__bottom">
-      <p>&copy; 2026 SMC Transporte Executivo. Todos os direitos reservados.</p>
+      <nav class="site-footer__nav">
+        <a href="servicos.html">Serviços</a>
+        <a href="index.html#frota">Frota</a>
+        <a href="index.html#sobre">Sobre</a>
+        <a href="index.html#contato">Contato</a>
+      </nav>
+      <p class="site-footer__copy">&copy; 2026 SMC Transporte Executivo · Brasília, DF · Todos os direitos reservados.</p>
     </div>
   </footer>
 
-  <a href="https://wa.me/5561999999999?text=Ola%2C+gostaria+de+um+orcamento+SMC" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Falar pelo WhatsApp">
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/5561999999999?text=Olá%2C+gostaria+de+um+orçamento+SMC" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Falar pelo WhatsApp">
     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   </a>
 
