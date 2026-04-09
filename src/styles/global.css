@@ -27,7 +27,7 @@ ul, ol { list-style: none; }
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
   line-height: 1.15;
-  font-weight: 500;
+  font-weight: 600;
 }
 h1 { font-size: var(--text-h1); }
 h2 { font-size: var(--text-h2); }
